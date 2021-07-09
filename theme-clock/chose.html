@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    
+    <style type="text/css">
+		body {
+      background-color: currentcolor;
+
+		}
+		
+
+		form {
+			text-align: center;
+		}
+		
+		input {
+			width: 3em;
+			height: 3em;
+			padding: 0.5em;
+			margin: 0.5em auto;
+		}
+		
+		span {
+		    color: black;
+		}
+		 #farbangabe {
+			 position: fixed;
+			 z-index: 100;
+			 right: 0;
+			 top: 0;
+		}
+	</style>
+    
+    
+    <title>Theme Clock</title>
+	  <meta name="apple-mobile-web-app-capable" content="yes">
+	  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	  <meta name="apple-mobile-web-app-title" content="UHR">
+	  
+	  <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/gitpages/lite/master/theme-clock/icon.png"/>
+
+  </head>
+  <body>
+    <!-- Inspired by this dribbble shot https://dribbble.com/shots/5958443-Alarm-clock -->
+
+			<input type="color" value="#04d92e" id="farbangabe" name=" " oninput="farbwechsler(farbangabe.value)" pattern="^#([A-Fa-f0-9]{6})$" required="" title="Fabe"> </div>
+	<script>
+		function farbwechsler(colorValue) {
+			document.body.style.color = colorValue;
+		}
+
+	</script>
+
+    <div class="clock-container">
+      <div class="clock">
+        <div class="needle hour"></div>
+        <div class="needle minute"></div>
+        <div class="needle second"></div>
+        <div class="center-point"></div>
+      </div>
+
+      <div class="time"></div>
+      <div class="date"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
